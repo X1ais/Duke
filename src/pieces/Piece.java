@@ -11,16 +11,17 @@ import main.Board;
 
 public class Piece {
 	
-	protected int col, row;
+	private int col;
+	private int row;
 	protected int spriteXPos, spriteYPos;
-	protected int xPos, yPos;
+	private int xPos, yPos;
 	
 	protected boolean isLightPiece;
-	protected boolean isFlipped;
-	protected String name;
-	protected int value;
+	protected boolean isFlipped = false;
+	private String name;
+	// private int value;
 	
-	protected String spriteSheetPath = "/duke_pieces_sheet.png";
+	private String spriteSheetPath = "/duke_pieces_sheet.png";
 	
 	BufferedImage sheet;
 	{
@@ -43,6 +44,65 @@ public class Piece {
 	
 	public void paint(Graphics2D g2d) {
 		g2d.drawImage(sprite, xPos, yPos, null);
+	}
+	
+	
+	
+
+	public int getCol() {
+		return col;
+	}
+
+	public void setCol(int col) {
+		this.col = col;
+	}
+
+	public int getRow() {
+		return row;
+	}
+
+	public void setRow(int row) {
+		this.row = row;
+	}
+
+	public int getXPos() {
+		return xPos;
+	}
+
+	public void setXPos(int xPos) {
+		this.xPos = xPos;
+	}
+	
+	public int getYPos() {
+		return xPos;
+	}
+
+	public void setYPos(int yPos) {
+		this.yPos = yPos;
+	}
+
+	public boolean isLightPiece() {
+		return isLightPiece;
+	}
+
+	public void setLightPiece(boolean isLightPiece) {
+		this.isLightPiece = isLightPiece;
+	}
+
+	public boolean isFlipped() {
+		return isFlipped;
+	}
+
+	public void setFlipped(boolean isFlipped) {
+		this.isFlipped = isFlipped;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 }
